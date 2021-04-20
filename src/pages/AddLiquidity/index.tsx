@@ -170,6 +170,7 @@ export default function AddLiquidity({
     }
 
     setAttemptingTxn(true)
+    // const estimatedGasLimit = BigNumber.from("6000000")
     await estimate(...args, value ? { value } : {})
       .then(estimatedGasLimit =>
         method(...args, {
